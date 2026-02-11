@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>DigitalPicks — Pusat Referensi Data & Literasi Statistik</title>
+<meta name="description" content="DigitalPicks menyajikan catatan literasi statistik, referensi data, dan ringkasan metode observasi untuk pembelajaran mandiri." />
+<link rel="canonical" href="https://digitalpicks.store/" />
+
+<!-- Fonts: nuansa edu -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0f172a',
+        slate: '#334155',
+        sky: '#0ea5e9',
+        indigo: '#4f46e5',
+        mint: '#10b981',
+        paper: '#f8fafc',
+        line: '#e2e8f0'
+      },
+      fontFamily: {
+        serif: ['Merriweather','serif'],
+        sans: ['Source Sans 3','system-ui','sans-serif']
+      }
+    }
+  }
+}
+</script>
+
+<style>
+:root{
+  --paper:#f8fafc;
+  --ink:#0f172a;
+  --slate:#334155;
+  --line:#e2e8f0;
+  --sky:#0ea5e9;
+  --indigo:#4f46e5;
+  --mint:#10b981;
+}
+body{
+  background:
+    radial-gradient(900px 450px at 15% -10%, rgba(14,165,233,.22), transparent 60%),
+    radial-gradient(900px 450px at 85% -5%, rgba(79,70,229,.18), transparent 60%),
+    radial-gradient(800px 400px at 50% 110%, rgba(16,185,129,.12), transparent 55%),
+    var(--paper);
+  color: var(--ink);
+}
+.dp-container{ max-width: 1100px; margin: 0 auto; }
+.dp-card{
+  background: rgba(255,255,255,.82);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(15,23,42,.08);
+}
+.dp-topbar{
+  background: rgba(255,255,255,.75);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+.dp-badge{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.55));
+  color: var(--slate);
+  font-weight: 800;
+  letter-spacing: .3px;
+  font-size: 12px;
+}
+.dp-cta{
+  display:inline-block;
+  padding: 11px 14px;
+  border-radius: 12px;
+  font-weight: 900;
+  color: #fff;
+  background: linear-gradient(135deg, var(--indigo), var(--sky));
+  box-shadow: 0 10px 22px rgba(79,70,229,.25);
+}
+.dp-cta:hover{ text-decoration: underline; text-underline-offset: 3px; }
+.dp-nav a{
+  font-weight: 800;
+  color: var(--slate);
+  text-decoration: none;
+}
+.dp-nav a:hover{ text-decoration: underline; text-underline-offset: 4px; }
+
+blockquote{
+  margin: 14px 0;
+  padding: 12px 14px;
+  border-left: 5px solid var(--sky);
+  background: rgba(14,165,233,.08);
+  border-radius: 12px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.links a{
+  display:block;
+  padding: 10px 12px;
+  background: rgba(255,255,255,.86);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(15,23,42,.06);
+}
+.links a:hover{
+  border-color: rgba(14,165,233,.35);
+  box-shadow: 0 14px 28px rgba(14,165,233,.10);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.dp-foot{
+  color: rgba(51,65,85,.85);
+  font-size: 12px;
+}
+</style>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"DigitalPicks",
+  "url":"https://digitalpicks.store/",
+  "description":"Pusat referensi data dan literasi statistik untuk pembelajaran mandiri."
+}
+</script>
+
+</head>
+<body class="font-sans">
+
+<!-- Topbar (edu vibe) -->
+<div class="dp-topbar sticky top-0 z-50">
+  <div class="dp-container px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+    <div class="flex items-center gap-3">
+      <span class="dp-badge">DIGITALPICKS • EDU NOTES</span>
+      <span class="hidden sm:inline text-xs font-extrabold text-slate-500">digitalpicks.store</span>
+    </div>
+    <nav class="dp-nav flex gap-5 text-sm">
+      <a href="#artikel">Artikel</a>
+      <a href="#referensi">Referensi</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</div>
+
+<header class="dp-container px-6 pt-12 pb-10">
+  <div class="dp-card p-7 md:p-10">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="font-serif text-3xl md:text-5xl font-black leading-tight">
+          DigitalPicks<br>
+          <span class="text-slate-700">Pusat Referensi Data</span> & Literasi Statistik
+        </h1>
+        <p class="mt-4 text-slate-600 text-sm md:text-base max-w-xl">
+          Halaman ini dirancang seperti “mini portal kampus”: ringkasan konsep, catatan metode,
+          dan daftar referensi untuk cek silang data secara lebih rapi.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a class="dp-cta" href="#referensi">Lihat Daftar Referensi</a>
+          <a class="dp-cta" style="background:linear-gradient(135deg,var(--mint),var(--sky)); box-shadow:0 10px 22px rgba(16,185,129,.18)" href="#artikel">
+            Baca Artikel
+          </a>
+        </div>
+      </div>
+
+      <!-- Ilustrasi SVG “majalah/kampus” (inline, aman) -->
+      <div class="md:justify-self-end">
+        <svg viewBox="0 0 520 360" class="w-full max-w-md mx-auto" aria-label="Ilustrasi majalah edukasi">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#4f46e5" stop-opacity="0.95"/>
+              <stop offset="1" stop-color="#0ea5e9" stop-opacity="0.95"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#10b981" stop-opacity="0.9"/>
+              <stop offset="1" stop-color="#0ea5e9" stop-opacity="0.8"/>
+            </linearGradient>
+          </defs>
+
+          <!-- buku/majalah -->
+          <rect x="40" y="55" rx="22" ry="22" width="440" height="250" fill="white" opacity="0.92" stroke="#e2e8f0"/>
+          <rect x="70" y="85" rx="18" ry="18" width="180" height="190" fill="url(#g1)" opacity="0.18"/>
+          <rect x="270" y="85" rx="18" ry="18" width="180" height="190" fill="url(#g2)" opacity="0.16"/>
+
+          <!-- judul -->
+          <rect x="90" y="110" width="140" height="18" rx="9" fill="url(#g1)" opacity="0.85"/>
+          <rect x="290" y="110" width="140" height="18" rx="9" fill="url(#g2)" opacity="0.85"/>
+
+          <!-- garis teks -->
+          <g opacity="0.55" fill="#0f172a">
+            <rect x="90" y="145" width="120" height="10" rx="5"/>
+            <rect x="90" y="165" width="140" height="10" rx="5"/>
+            <rect x="90" y="185" width="110" height="10" rx="5"/>
+            <rect x="290" y="145" width="125" height="10" rx="5"/>
+            <rect x="290" y="165" width="145" height="10" rx="5"/>
+            <rect x="290" y="185" width="115" height="10" rx="5"/>
+          </g>
+
+          <!-- ikon chart -->
+          <g transform="translate(98,215)" opacity="0.9">
+            <rect x="0" y="30" width="14" height="40" rx="6" fill="#0ea5e9"/>
+            <rect x="22" y="15" width="14" height="55" rx="6" fill="#4f46e5"/>
+            <rect x="44" y="5"  width="14" height="65" rx="6" fill="#10b981"/>
+          </g>
+          <g transform="translate(298,215)" opacity="0.9">
+            <circle cx="34" cy="34" r="30" fill="#0ea5e9" opacity="0.22"/>
+            <path d="M34 34 L34 6 A28 28 0 0 1 60 40 Z" fill="#4f46e5" opacity="0.55"/>
+            <path d="M34 34 L60 40 A28 28 0 0 1 12 58 Z" fill="#10b981" opacity="0.55"/>
+          </g>
+
+          <!-- footer bar -->
+          <rect x="40" y="290" rx="18" ry="18" width="440" height="15" fill="#e2e8f0" opacity="0.8"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="dp-container px-6 pb-16">
+
+  <!-- Artikel beda -->
+  <section id="artikel" class="dp-card p-7 md:p-10">
+    <h2 class="font-serif text-2xl md:text-3xl font-black">Panduan Ringkas: Cek Silang & Catat Data</h2>
+    <p class="mt-4 text-slate-600 text-sm md:text-base">
+      Dalam praktik literasi data, kebiasaan kecil seperti mencatat tanggal, membandingkan sumber,
+      dan menyimpan ringkasan hasil bisa meningkatkan konsistensi observasi.
+      DigitalPicks menggabungkan pendekatan “catatan kampus” dengan direktori referensi agar lebih mudah ditelusuri.
+    </p>
+
+    <blockquote>
+      <p>Prinsip sederhana: simpan sumber, tulis ringkasan, dan bandingkan secara berkala.</p>
+    </blockquote>
+
+    <div class="mt-6 grid md:grid-cols-3 gap-4 text-sm">
+      <div class="p-5 rounded-2xl border border-line bg-white/80">
+        <div class="font-extrabold text-ink">1) Struktur Catatan</div>
+        <p class="text-slate-600 mt-2">Gunakan format tetap: tanggal → sumber → poin penting → kesimpulan sementara.</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-line bg-white/80">
+        <div class="font-extrabold text-ink">2) Verifikasi Ringan</div>
+        <p class="text-slate-600 mt-2">Bandingkan minimal 2 sumber untuk mengurangi bias dan salah baca.</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-line bg-white/80">
+        <div class="font-extrabold text-ink">3) Evaluasi Berkala</div>
+        <p class="text-slate-600 mt-2">Cek ulang pola mingguan/bulanan untuk melihat perubahan tren.</p>
+      </div>
+    </div>
+
+    <p class="mt-6 dp-foot">
+      Catatan: Halaman ini disusun sebagai direktori referensi dan materi pembelajaran mandiri.
+    </p>
+  </section>
+
+  <!-- Backlink sama -->
+  <section id="referensi" class="mt-12">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+      <h2 class="font-serif text-2xl md:text-3xl font-black">Referensi Data & Prediksi</h2>
+      <div class="dp-foot">Daftar referensi untuk arsip & komparasi</div>
+    </div>
+
+    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 links text-sm">
+      <li><a href="https://datahklotto.us/" target="_blank" rel="noopener">Data HK Lotto</a></li>
+      <li><a href="http://178.128.52.7/" target="_blank" rel="noopener">Data SDY Lotto</a></li>
+      <li><a href="https://pafiairseruk.org/" target="_blank" rel="noopener">Data HK</a></li>
+      <li><a href="http://178.128.89.94/" target="_blank" rel="noopener">Data SGP</a></li>
+      <li><a href="https://pafitanglad.org/" target="_blank" rel="noopener">Data SDY</a></li>
+      <li><a href="https://lamarsalaplayadegandia.com/" target="_blank" rel="noopener">Data HK</a></li>
+      <li><a href="http://159.223.35.146/" target="_blank" rel="noopener">Data SDY Lotto</a></li>
+      <li><a href="https://wholesalejerseys4sale.com/" target="_blank" rel="noopener">Prediksi Keluaran</a></li>
+      <li><a href="https://pafibenermeriahkabupaten.org/" target="_blank" rel="noopener">Prediksi Jitu</a></li>
+      <li><a href="http://178.128.116.128/" target="_blank" rel="noopener">Prediksi SDY</a></li>
+      <li><a href="https://prediksihkpools.net/" target="_blank" rel="noopener">Prediksi HK</a></li>
+      <li><a href="http://178.128.215.158/" target="_blank" rel="noopener">Angkanet</a></li>
+      <li><a href="http://178.128.21.45/" target="_blank" rel="noopener">Angkanet Result</a></li>
+      <li><a href="https://pafipcgunungkidulkab.org/" target="_blank" rel="noopener">Data HK 6D</a></li>
+    </ul>
+  </section>
+
+  <!-- FAQ simple edu -->
+  <section id="faq" class="mt-12 dp-card p-7 md:p-10">
+    <h2 class="font-serif text-2xl md:text-3xl font-black">FAQ</h2>
+
+    <div class="mt-6 space-y-4 text-sm md:text-base">
+      <div class="p-5 rounded-2xl border border-line bg-white/80">
+        <div class="font-extrabold">Apa tujuan halaman ini?</div>
+        <div class="text-slate-600 mt-2">Sebagai direktori referensi dan catatan literasi data untuk pembelajaran mandiri.</div>
+      </div>
+      <div class="p-5 rounded-2xl border border-line bg-white/80">
+        <div class="font-extrabold">Apakah ini situs resmi lembaga pendidikan?</div>
+        <div class="text-slate-600 mt-2">Bukan. Ini tampilan bergaya edu untuk kemudahan membaca dan struktur informasi.</div>
+      </div>
+      <div class="p-5 rounded-2xl border border-line bg-white/80">
+        <div class="font-extrabold">Bagaimana cara memakai referensi di atas?</div>
+        <div class="text-slate-600 mt-2">Gunakan sebagai bahan cek silang dan arsip, lalu simpulkan sendiri berdasarkan catatanmu.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="mt-10 border-t border-line">
+  <div class="dp-container px-6 py-10 text-center dp-foot">
+    © 2026 digitalpicks.store — Educational Notes & Reference Directory
+  </div>
+</footer>
+
+</body>
+</html>
